@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+
+            <TextView
+                android:id="@+id/txtOtherLinks"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/other_links"
+                android:textColor="@color/greey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/recOther"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/viewDividerOthers" />
+
+            <View
+                android:id="@+id/viewDividerToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@color/color_E1E1E1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constButton"
+
+                />
+
+
+            <View
+                android:id="@+id/viewDividerOthers"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/color_E1E1E1"
+                app:layout_constraintBottom_toTopOf="@+id/txtOtherLinks"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recHome"
+
+                />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="@id/live"
+                app:layout_constraintEnd_toStartOf="@+id/live"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/live">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnlogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/bg_rounded_corner"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/log_in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    app:backgroundTint="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnSignup"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignup"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bg_rounded_corner"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_14sdp"
+                    app:backgroundTint="@color/red"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnlogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/btnlogin"
+                    app:layout_constraintTop_toTopOf="@+id/btnlogin" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLanguageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_square"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/medium_size"
+                android:paddingEnd="@dimen/normal_size"
+                android:paddingBottom="@dimen/medium_size"
+                app:layout_constraintBottom_toTopOf="@id/cl_country_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/constButton">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgLanguageArrow"
+                    style="@style/ImageviewStyle"
+                    android:src="@drawable/ic_iconly_light_arrow___right_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/txtSelectedLanguage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtSelectedLanguage"
+                    style="@style/TextViewPrimaryMediumStyle"
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:text="@string/english"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_15sdp"
+                    app:fontFamily="@font/source_sans_pro_bold"
+                    app:layout_constraintBottom_toBottomOf="@id/txtChangeLanguage"
+                    app:layout_constraintEnd_toStartOf="@+id/imgLanguageArrow"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/txtChangeLanguage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtChangeLanguage"
+                    style="@style/TextViewPrimaryStyle"
+                    android:layout_width="0sp"
+                    android:text="@string/language"
+                    app:fontFamily="@font/source_sans_pro_bold"
+                    app:layout_constraintBottom_toBottomOf="@id/txtSelectedLanguage"
+                    app:layout_constraintEnd_toStartOf="@+id/txtSelectedLanguage"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txtSelectedLanguage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_country_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_square"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/medium_size"
+                android:paddingEnd="@dimen/normal_size"
+                android:paddingBottom="@dimen/medium_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constLanguageContainer">
+
+                <ImageView
+                    android:id="@+id/imgCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/micc"
+
+                    app:layout_constraintBottom_toBottomOf="@id/tv_selected_country"
+                    app:layout_constraintEnd_toStartOf="@id/iv_country_arrow"
+                    app:layout_constraintStart_toEndOf="@id/tv_selected_country"
+                    app:layout_constraintTop_toTopOf="@id/tv_selected_country" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_country_arrow"
+                    style="@style/ImageviewStyle"
+                    android:src="@drawable/ic_iconly_light_arrow___right_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imgCountry"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_selected_country"
+                    style="@style/TextViewPrimaryMediumStyle"
+                    android:layout_width="wrap_content"
+
+
+                    android:text="@{selectedStore}"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="normal"
+                    app:fontFamily="@font/source_sans_pro_bold"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_change_country_lable"
+                    app:layout_constraintEnd_toStartOf="@+id/imgCountry"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_change_country_lable"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_change_country_lable"
+                    style="@style/TextViewPrimaryStyle"
+                    android:layout_width="0sp"
+                    android:text="@string/country"
+                    app:fontFamily="@font/source_sans_pro_bold"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_selected_country"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_selected_country"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_selected_country" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollViewMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toTopOf="@+id/recList"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtOtherLinks"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/txtOtherLinks"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_country_container"
+                tools:itemCount="3"
+                tools:listitem="@layout/list_data" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recOther"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/recList"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtOtherLinks"
+                tools:itemCount="7"
+                tools:listitem="@layout/list_cms_data" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recOther"
+                tools:listitem="@layout/item_social_data"
+
+
+                />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/live"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_12sdp"
+                android:ellipsize="end"
+                android:gravity="center"
+
+                android:text="@string/live_midas_life"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/imgClose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imgClose"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <data>
+
+        <variable
+            name="selectedStore"
+            type="String" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+</layout>

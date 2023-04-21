@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <data>
+
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:bind="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.notifications.NotificationsFragment">
+
+        <TextView
+            android:id="@+id/txtNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:textSize="@dimen/_18sdp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mark"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/mark_all_as_read"
+            android:textSize="@dimen/_15sdp"
+            app:fontFamily="@font/source_sans_pro_semibold"
+            android:textColor="@color/red"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@id/rvNotification"
+            app:layout_constraintTop_toBottomOf="@+id/txtNotification"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotification"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mark"
+            tools:itemCount="4"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_notify"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

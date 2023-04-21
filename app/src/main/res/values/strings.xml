@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Navigationdrawer</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="english">English</string>
+    <string name="language">Language</string>
+    <string name="kuwait">Kuwait</string>
+    <string name="country">Country</string>
+    <string name="live_midas_life">Live Midas Life</string>
+    <string name="categ">Categoeries</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="other_links">Other Links</string>
+    <string name="mark_all_as_read">Mark all as read</string>
+</resources>
